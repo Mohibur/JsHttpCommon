@@ -21,3 +21,16 @@
 
 1. *FormSubmit.get()*
 &nbsp;&nbsp;&nbsp;&nbsp;<p>Will trigger form submit as GET. Cannot be canceled.</p>
+
+# Example
+
+```javascript
+// submit as get method. to `${url}/`
+FormSubmit.setValue("name", "Craig Ferguson").setValue("dateOfBirth", "May 17, 1962").submit();
+
+// submit as get method. to `${url}/`
+FormSubmit.setUrl("/some_path/").setValue("name", "Craig Ferguson").setValue("dateOfBirth", "May 17, 1962").submit();
+
+// submit as post method. to `${url}/`
+FormSubmit.setUrl("/some_path/").setValue("name", "Craig Ferguson").setValue("dateOfBirth", "May 17, 1962").post();
+```
