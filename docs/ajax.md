@@ -81,7 +81,7 @@ __note__: return this object
 ## Handling function parameters
 
 ```javascript
-function func(body: {XML Object, JavaScript Object}, headerMap: JavaScript Object, {status: status: int, rawBody: bodyOriginal: string, rawHeader: headerDump: string});
+function func(body: {XML Object, JavaScript Object, raw(string or otherwise)}, headerMap: JavaScript Object, {status: status: int, rawBody: bodyOriginal: string, rawHeader: headerDump: string});
 ```
 
 
