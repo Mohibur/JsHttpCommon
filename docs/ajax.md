@@ -78,6 +78,13 @@ __note__: return this object
 
 __note__: return this object
 
+## Handling function parameters
+
+```javascript
+function func(body: {XML Object, JavaScript Object}, headerMap: JavaScript Object, {status: status: int, rawBody: bodyOriginal: string, rawHeader: headerDump: string});
+```
+
+
 ## Additional note on success handling
 
 1. If both 2xx and sucess is declared both of them will be called. 2xx will get higher priority
@@ -85,3 +92,6 @@ __note__: return this object
 
 
 ## Additional note on error handling
+1. IF Error Handling by status code and error() is set both of them will be called. Status code method will get higher priority
+2. Currently xml and json data is being parsed to object
+3. If parsing failed then success will not be called even if server response 2xx; only error will be called. 
