@@ -4,7 +4,7 @@
 
 ### One *FormSubmit* object is created. A second object should not be needed.
 
-1. *FormSubmit.setValue(name, value)*
+1. *FormSubmit.value(name, value)*
 &nbsp;&nbsp;&nbsp;&nbsp;<p>To add a value to submit </p>
 
 1. *FormSubmit.url(action), FormSubmit.action(action)*
@@ -26,11 +26,11 @@
 
 ```javascript
 // submit as get method. to `${url}/`
-FormSubmit.setValue("name", "Craig Ferguson").setValue("dateOfBirth", "May 17, 1962").submit();
+FormSubmit.value("name", "Craig Ferguson").value("dateOfBirth", "May 17, 1962").submit();
 
 // submit as get method. to `${url}/some_path/`
-FormSubmit.setUrl("/some_path/").setValue("name", "Craig Ferguson").setValue("dateOfBirth", "May 17, 1962").submit();
+FormSubmit.setUrl("/some_path/").value("name", "Craig Ferguson").value("dateOfBirth", "May 17, 1962").submit();
 
 // submit as post method. to `${url}/some_path/`
-FormSubmit.setUrl("/some_path/").setValue("name", "Craig Ferguson").setValue("dateOfBirth", "May 17, 1962").post();
+FormSubmit.setUrl("/some_path/").value("name", "Craig Ferguson").value("dateOfBirth", "May 17, 1962").post();
 ```

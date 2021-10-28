@@ -8,7 +8,7 @@ function __form_submit() {
 		form.id = window.URL.createObjectURL(new Blob([])).substr(-36);
 		document.body.appendChild(form);
 
-		this.setValue = function(name, val) {
+		this.value = function(name, val) {
 			let input = document.createElement("input");
 			input.type = "hidden";
 			input.name = name;
