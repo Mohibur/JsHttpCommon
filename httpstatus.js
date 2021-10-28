@@ -1,3 +1,5 @@
+const HTTP_STATUS_VER = "1.0.0";
+
 const HttpStatus = {};
 
     // --- 1xx Informational ---
