@@ -29,8 +29,8 @@
 FormSubmit.value("name", "Craig Ferguson").value("dateOfBirth", "May 17, 1962").submit();
 
 // submit as get method. to `${url}/some_path/`
-FormSubmit.setUrl("/some_path/").value("name", "Craig Ferguson").value("dateOfBirth", "May 17, 1962").submit();
+FormSubmit.url("/some_path/").value("name", "Craig Ferguson").value("dateOfBirth", "May 17, 1962").submit();
 
 // submit as post method. to `${url}/some_path/`
-FormSubmit.setUrl("/some_path/").value("name", "Craig Ferguson").value("dateOfBirth", "May 17, 1962").post();
+FormSubmit.url("/some_path/").value("name", "Craig Ferguson").value("dateOfBirth", "May 17, 1962").post();
 ```
