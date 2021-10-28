@@ -1,4 +1,6 @@
 // we do not need more than one object
+const FORM_SUBMIT_VER = "1.0.0";
+
 const FormSubmit = function() {
 	return new function() {
 
