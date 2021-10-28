@@ -1,3 +1,4 @@
+const MEDIA_TYPE_VER = "1.0.0";
 const MediaType = {};
 Object.defineProperty(MediaType, "ALL_VALUE", {value: "*/*",writable: false,enumerable: true,configurable: true});
 Object.defineProperty(MediaType, "APPLICATION_ATOM_XML_VALUE", {value: "application/atom+xml",writable: false,enumerable: true,configurable: true});
