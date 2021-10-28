@@ -1,9 +1,8 @@
 // we do not need more than one object
 const FORM_SUBMIT_VER = "1.0.0";
 
-const FormSubmit = function() {
+function __form_submit() {
 	return new function() {
-
 		let form = document.createElement("form");
 		form.style.display = "none";
 		form.id = window.URL.createObjectURL(new Blob([])).substr(-36);
@@ -32,14 +31,15 @@ const FormSubmit = function() {
 		}
 
 		this.post = function() {
-			this.method = "POST";
+			this.method = Methods.POST;
 			form.submit();
 		}
 
 		this.get = function() {
-			this.method = "GET";
+			this.method = Methods.GET;
 			form.submit();
 		}
 	}
-}();
+}
 
+const FormSubmit = __form_submit();
