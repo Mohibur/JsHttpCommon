@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="icon" href="data:;">
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nothing</h1>
+
+<div>
+	<div style='float:left'>Name</div>
+	<div style='float:right'><input id="name" />
+</div>
+<div style='clear:both' >&nbsp;</div>
+<div>
+	<div style='float:left'>Year</div>
+	<div style='float:right'>
+		<select id="year_range">
+			<option value=1>1901 - 1910</option>
+			<option value=2>1911 - 1920</option>
+			<option value=3>1921 - 1930</option>
+			<option value=4>1931 - 1940</option>
+			<option value=5>1941 - 1950</option>
+			<option value=6>1951 - 1960</option>
+			<option value=7>1961 - 1970</option>
+			<option value=8>1971 - 1980</option>
+			<option value=9>1981 - 1990</option>
+			<option value=10 selected>1991 - 2000</option>
+			<option value=11>2001 - 2010</option>
+			<option value=12>2011 - 2020</option>
+			<option value=13>2021 - 2030</option>
+		</select>
+	</div>
+	<div style='clear:both'>&nbsp;</div>
+</div>
+<div>&nbsp;</div>
+<input type="button" onclick="submit.call(this)" value="post" />&nbsp;
+<input type="button" onclick="submit.call(this)" value="get" />
+<div style='border:1px solid gray; padding: 5px;' id="source_code">
+FormSubmit.url(<span style="color:blue">"/test/submit.html"</span>)<br />
+<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>.value(<span style="color:blue">"name"</span>, document.getElementById(<span style="color:blue">"name"</span>).value)<br />
+<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>.value(<span style="color:blue">"year_range"</span>, document.getElementById(<span style="color:blue">"year_range"</span>).value)<br />
+<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>.get();
+</div>
+
+<script src="/js/httpstatus.js"></script>
+<script src="/js/mediatype.js"></script>
+<script src="/js/methods.js"></script>
+<script src="/js/submitform.js"></script>
+
+<script id="script_s">
+function submit() {
+	FormSubmit.url("/test/submit.html")
+		.value("name", document.getElementById("name").value)
+		.value("year_range", document.getElementById("year_range").value)
+	var method = this.value.toLowerCase();
+	console.log(method);
+	if(method == "post") {
+		FormSubmit.post(); 
+	} else {
+		FormSubmit.get(); 
+	}
+}
+</script>
+</body>
+</html>

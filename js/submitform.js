@@ -31,12 +31,12 @@ function __form_submit() {
 		}
 
 		this.post = function() {
-			this.method = Methods.POST;
+			form.method = Methods.POST;
 			form.submit();
 		}
 
 		this.get = function() {
-			this.method = Methods.GET;
+			form.method = Methods.GET;
 			form.submit();
 		}
 	}
