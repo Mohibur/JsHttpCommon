@@ -16,6 +16,9 @@ function __form_submit() {
 			form.appendChild(input);
 			return this;
 		}
+		this.target = function(target) {
+			form.target = target;
+		}
 		this.url = this.action = function(action) {
 			form.action = action;
 			return this;

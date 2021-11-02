@@ -17,7 +17,7 @@
 
 <div>
 	<div style='float:left'>Name</div>
-	<div style='float:right'><input id="name" />
+	<div style='float:right'><input id="name" value="Rashid"/>
 </div>
 <div style='clear:both' >&nbsp;</div>
 <div>
@@ -58,7 +58,7 @@ FormSubmit.url(<span style="color:blue">"/test/submit.html"</span>)<br />
 
 <script id="script_s">
 function submit() {
-	FormSubmit.url("/test/submit.html")
+	FormSubmit.url("/test/submit.php")
 		.value("name", document.getElementById("name").value)
 		.value("year_range", document.getElementById("year_range").value)
 	var method = this.value.toLowerCase();
