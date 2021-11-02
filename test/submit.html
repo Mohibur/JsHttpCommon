@@ -21,22 +21,19 @@
 </div>
 <div style='clear:both' >&nbsp;</div>
 <div>
-	<div style='float:left'>Year</div>
+	<div style='float:left'>Age range</div>
 	<div style='float:right'>
-		<select id="year_range">
-			<option value=1>1901 - 1910</option>
-			<option value=2>1911 - 1920</option>
-			<option value=3>1921 - 1930</option>
-			<option value=4>1931 - 1940</option>
-			<option value=5>1941 - 1950</option>
-			<option value=6>1951 - 1960</option>
-			<option value=7>1961 - 1970</option>
-			<option value=8>1971 - 1980</option>
-			<option value=9>1981 - 1990</option>
-			<option value=10 selected>1991 - 2000</option>
-			<option value=11>2001 - 2010</option>
-			<option value=12>2011 - 2020</option>
-			<option value=13>2021 - 2030</option>
+		<select id="age_range">
+			<option value=1>0 - 4</option>
+			<option value=2>5 - 12</option>
+			<option value=3>13 - 19</option>
+			<option value=4>20 - 29</option>
+			<option value=5>30 - 39</option>
+			<option value=6 selected>40 - 49</option>
+			<option value=7>50 - 59</option>
+			<option value=8>60 - 69</option>
+			<option value=9>70 - 79</option>
+			<option value=10>80 - </option>
 		</select>
 	</div>
 	<div style='clear:both'>&nbsp;</div>
@@ -47,7 +44,7 @@
 <div style='border:1px solid gray; padding: 5px;' id="source_code">
 FormSubmit.url(<span style="color:blue">"/test/submit.html"</span>)<br />
 <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>.value(<span style="color:blue">"name"</span>, document.getElementById(<span style="color:blue">"name"</span>).value)<br />
-<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>.value(<span style="color:blue">"year_range"</span>, document.getElementById(<span style="color:blue">"year_range"</span>).value)<br />
+<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>.value(<span style="color:blue">"age_range"</span>, document.getElementById(<span style="color:blue">"age_range"</span>).value)<br />
 <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>.get();
 </div>
 
@@ -60,9 +57,8 @@ FormSubmit.url(<span style="color:blue">"/test/submit.html"</span>)<br />
 function submit() {
 	FormSubmit.url("/test/submit.php")
 		.value("name", document.getElementById("name").value)
-		.value("year_range", document.getElementById("year_range").value)
+		.value("age_range", document.getElementById("age_range").value)
 	var method = this.value.toLowerCase();
-	console.log(method);
 	if(method == "post") {
 		FormSubmit.post(); 
 	} else {
